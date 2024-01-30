@@ -13,9 +13,23 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordText: UITextField!
     
+    
+    var loginUser = Response(){
+        didSet{
+            if let encodeUser = try? JSONEncoder().encode(loginUser){
+                UserDafaultsSave(key: "User", value: encodeUser)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let data = UserDafaultsRead(key: "User"),
+           let encodeData = try? JSONDecoder().decode(Response.self, from: data){
+            print("有成功儲存Token在UserDafaults: ",encodeData)
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -30,13 +44,36 @@ class LoginViewController: UIViewController {
         }else{
             let userInfo = Info(login: accountText.text!, email: "", password: passwordText.text!)
             
-            RequestHandler.shared.httpMethod(info: userInfo, status: .createUser) { data in
-                
+            RequestHandler.shared.httpMethod(info: userInfo, status: .login) { result in
+                switch result{
+                case .success(let data):
+                    if let data = try? JSONDecoder().decode(Response.self, from: data){
+                        guard let _ = data.errorCode else {
+                            self.loginUser = data
+                            
+                            print("成功登入", data)
+                            DispatchQueue.main.async {
+                                self.present(loginAlert(userAlet: "成功登入"), animated: true)
+                            }
+                            return
+                        }
+                        DispatchQueue.main.async {
+                            self.present(loginAlert(userAlet: data.message!), animated: true)
+                        }
+                    }
+                case .failure(let networkError):
+                    switch networkError{
+                    case .invaildData:
+                    print("invaildData")
+                    case .invaildResponse:
+                    print("invaildResponse")
+                    }
+                }
             }
         }
     }
     
-    
+
     
     
     

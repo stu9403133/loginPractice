@@ -20,7 +20,6 @@ class RequestHandler{
             }
             completion(.success(data))
             let content = try! String(data: data, encoding: .utf8)
-            print(response!)
             print("成功回傳資料", content!)
         }.resume()
         print("網路執行中")
@@ -33,13 +32,17 @@ class RequestHandler{
             var urlRequest = URLRequest(url: url)
             print("createUser's url: ",url)
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            urlRequest.setValue("Token token= \"1933ce55e106ebf1f42b6389448ceea5\"", forHTTPHeaderField: "Authorization")
+            urlRequest.setValue("Token token=\"1933ce55e106ebf1f42b6389448ceea5\"", forHTTPHeaderField: "Authorization")
             
             switch status {
             case .login:
-                let session = CreateSession(login: info.login, password: info.password)
-                urlRequest.httpBody = try? JSONEncoder().encode(session)
+                let session = CreateSession(user: Info(login: info.login, password: info.password))
+                print("編碼前： ",session)
+                let encodeUser = try? JSONEncoder().encode(session)
+                print("編碼後： ", encodeUser!)
+                urlRequest.httpBody = encodeUser
                 urlRequest.httpMethod = "POST"
+                
             case .createUser:
                 let users = CreateUser(user: Info(login: info.login, email: info.email, password: info.password))
                 urlRequest.httpBody = try? JSONEncoder().encode(users)
@@ -51,7 +54,7 @@ class RequestHandler{
         return finalRequest
     }
     
-     enum Status:String {
+    enum Status:String {
         case login = "session"
         case createUser = "users"
     }

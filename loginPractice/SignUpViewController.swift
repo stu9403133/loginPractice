@@ -19,7 +19,7 @@ class SignUpViewController: UIViewController {
     var createUser = Response(){
         didSet{
             if let encodeUser = try? JSONEncoder().encode(createUser){
-                UserDafaultsSave(key: "createUser", value: encodeUser)
+                UserDafaultsSave(key: "User", value: encodeUser)
             }
             
         }
@@ -49,10 +49,14 @@ class SignUpViewController: UIViewController {
                 switch result {
                 case .success(let data):
                     if let signUpResponse = try? JSONDecoder().decode(Response.self, from: data){
+                        guard let _ = signUpResponse.errorCode else{
+                            print(signUpResponse.message!)
+                            self.present(loginAlert(userAlet: signUpResponse.message!), animated: true)
+                                return
+                            }
                         self.createUser = signUpResponse
                         print("signUpResponse: ", signUpResponse)
-                    }
-                
+                        }
                 case .failure(let networkError):
                     switch networkError{
                     case .invaildData:
