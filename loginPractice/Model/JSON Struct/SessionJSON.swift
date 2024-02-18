@@ -21,6 +21,8 @@ struct Info:Codable{
     var login: String
     var email: String?
     var password: String
+    var body: String?
+    var author: String?
 }
 
 // for decode response JSON contenttype

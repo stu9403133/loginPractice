@@ -7,22 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2031A8532B73ABEB009ABCC1 /* BackgroundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031A8522B73ABEB009ABCC1 /* BackgroundHandler.swift */; };
+		2031A8552B73AF94009ABCC1 /* SetBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031A8542B73AF94009ABCC1 /* SetBackgroundViewController.swift */; };
+		206B143C2B68F13100B3D65C /* QuoteOfDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206B143B2B68F13100B3D65C /* QuoteOfDayViewController.swift */; };
+		206B14422B68F20900B3D65C /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206B14412B68F20900B3D65C /* QuoteTableViewController.swift */; };
+		206B14452B68F31000B3D65C /* GetQuoteJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206B14442B68F31000B3D65C /* GetQuoteJSON.swift */; };
+		206B14482B69045800B3D65C /* RequestEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206B14472B69045800B3D65C /* RequestEnum.swift */; };
 		2071F89E2B6746A300226B48 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071F89D2B6746A300226B48 /* AlertHelper.swift */; };
-		2071F8A12B67487D00226B48 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071F8A02B67487D00226B48 /* UserDefaultHelper.swift */; };
+		2071F8A12B67487D00226B48 /* UserDefaultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071F8A02B67487D00226B48 /* UserDefaultHandler.swift */; };
+		209B08D62B80F22600D545E7 /* SetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209B08D52B80F22600D545E7 /* SetTableViewController.swift */; };
+		20A41EE02B6A4B6D002E6CE7 /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A41EDF2B6A4B6D002E6CE7 /* BackgroundView.xib */; };
 		20A87BB02B64EF6D00034DE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A87BAF2B64EF6D00034DE8 /* AppDelegate.swift */; };
 		20A87BB22B64EF6D00034DE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A87BB12B64EF6D00034DE8 /* SceneDelegate.swift */; };
 		20A87BB72B64EF6D00034DE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A87BB52B64EF6D00034DE8 /* Main.storyboard */; };
 		20A87BB92B64EF6F00034DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A87BB82B64EF6F00034DE8 /* Assets.xcassets */; };
 		20A87BBC2B64EF6F00034DE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A87BBA2B64EF6F00034DE8 /* LaunchScreen.storyboard */; };
 		20A87BC42B64F05700034DE8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A87BC32B64F05700034DE8 /* LoginViewController.swift */; };
-		20A87BC62B64F07100034DE8 /* LoginJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A87BC52B64F07100034DE8 /* LoginJSON.swift */; };
-		20A87BC82B64F7CB00034DE8 /* HTTPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A87BC72B64F7CB00034DE8 /* HTTPHelper.swift */; };
+		20A87BC62B64F07100034DE8 /* SessionJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A87BC52B64F07100034DE8 /* SessionJSON.swift */; };
+		20A87BC82B64F7CB00034DE8 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A87BC72B64F7CB00034DE8 /* RequestHandler.swift */; };
 		20A87BCA2B64F89B00034DE8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A87BC92B64F89B00034DE8 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2031A8522B73ABEB009ABCC1 /* BackgroundHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundHandler.swift; sourceTree = "<group>"; };
+		2031A8542B73AF94009ABCC1 /* SetBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackgroundViewController.swift; sourceTree = "<group>"; };
+		206B143B2B68F13100B3D65C /* QuoteOfDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteOfDayViewController.swift; sourceTree = "<group>"; };
+		206B14412B68F20900B3D65C /* QuoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
+		206B14442B68F31000B3D65C /* GetQuoteJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQuoteJSON.swift; sourceTree = "<group>"; };
+		206B14472B69045800B3D65C /* RequestEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEnum.swift; sourceTree = "<group>"; };
 		2071F89D2B6746A300226B48 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
-		2071F8A02B67487D00226B48 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
+		2071F8A02B67487D00226B48 /* UserDefaultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHandler.swift; sourceTree = "<group>"; };
+		209B08D52B80F22600D545E7 /* SetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTableViewController.swift; sourceTree = "<group>"; };
+		20A41EDF2B6A4B6D002E6CE7 /* BackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
 		20A87BAC2B64EF6D00034DE8 /* loginPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A87BAF2B64EF6D00034DE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20A87BB12B64EF6D00034DE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,8 +47,8 @@
 		20A87BBB2B64EF6F00034DE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20A87BBD2B64EF6F00034DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A87BC32B64F05700034DE8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		20A87BC52B64F07100034DE8 /* LoginJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginJSON.swift; sourceTree = "<group>"; };
-		20A87BC72B64F7CB00034DE8 /* HTTPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHelper.swift; sourceTree = "<group>"; };
+		20A87BC52B64F07100034DE8 /* SessionJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionJSON.swift; sourceTree = "<group>"; };
+		20A87BC72B64F7CB00034DE8 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		20A87BC92B64F89B00034DE8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,12 +63,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2031A8562B73AF9E009ABCC1 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				209B08D52B80F22600D545E7 /* SetTableViewController.swift */,
+				2031A8542B73AF94009ABCC1 /* SetBackgroundViewController.swift */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		2047F2A02B6A49ED000869B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20A41EDF2B6A4B6D002E6CE7 /* BackgroundView.xib */,
+				20A87BB52B64EF6D00034DE8 /* Main.storyboard */,
+				20A87BBA2B64EF6F00034DE8 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		206B143D2B68F13A00B3D65C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2031A8562B73AF9E009ABCC1 /* Set */,
+				206B143F2B68F15B00B3D65C /* Quote */,
+				206B143E2B68F14D00B3D65C /* Login */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		206B143E2B68F14D00B3D65C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				20A87BC92B64F89B00034DE8 /* SignUpViewController.swift */,
+				20A87BC32B64F05700034DE8 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		206B143F2B68F15B00B3D65C /* Quote */ = {
+			isa = PBXGroup;
+			children = (
+				206B143B2B68F13100B3D65C /* QuoteOfDayViewController.swift */,
+				206B14412B68F20900B3D65C /* QuoteTableViewController.swift */,
+			);
+			path = Quote;
+			sourceTree = "<group>";
+		};
+		206B14402B68F18200B3D65C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				206B14462B69044700B3D65C /* Enum */,
+				206B14432B68F26300B3D65C /* JSON Struct */,
+				2071F89F2B6746AE00226B48 /* Helper */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		206B14432B68F26300B3D65C /* JSON Struct */ = {
+			isa = PBXGroup;
+			children = (
+				20A87BC52B64F07100034DE8 /* SessionJSON.swift */,
+				206B14442B68F31000B3D65C /* GetQuoteJSON.swift */,
+			);
+			path = "JSON Struct";
+			sourceTree = "<group>";
+		};
+		206B14462B69044700B3D65C /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				206B14472B69045800B3D65C /* RequestEnum.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		2071F89F2B6746AE00226B48 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				2071F89D2B6746A300226B48 /* AlertHelper.swift */,
-				20A87BC72B64F7CB00034DE8 /* HTTPHelper.swift */,
-				2071F8A02B67487D00226B48 /* UserDefaultHelper.swift */,
+				20A87BC72B64F7CB00034DE8 /* RequestHandler.swift */,
+				2071F8A02B67487D00226B48 /* UserDefaultHandler.swift */,
+				2031A8522B73ABEB009ABCC1 /* BackgroundHandler.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -76,15 +167,12 @@
 		20A87BAE2B64EF6D00034DE8 /* loginPractice */ = {
 			isa = PBXGroup;
 			children = (
-				2071F89F2B6746AE00226B48 /* Helper */,
+				206B14402B68F18200B3D65C /* Model */,
+				2047F2A02B6A49ED000869B0 /* View */,
+				206B143D2B68F13A00B3D65C /* Controllers */,
 				20A87BAF2B64EF6D00034DE8 /* AppDelegate.swift */,
 				20A87BB12B64EF6D00034DE8 /* SceneDelegate.swift */,
-				20A87BB52B64EF6D00034DE8 /* Main.storyboard */,
-				20A87BC52B64F07100034DE8 /* LoginJSON.swift */,
-				20A87BC32B64F05700034DE8 /* LoginViewController.swift */,
-				20A87BC92B64F89B00034DE8 /* SignUpViewController.swift */,
 				20A87BB82B64EF6F00034DE8 /* Assets.xcassets */,
-				20A87BBA2B64EF6F00034DE8 /* LaunchScreen.storyboard */,
 				20A87BBD2B64EF6F00034DE8 /* Info.plist */,
 			);
 			path = loginPractice;
@@ -149,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20A87BBC2B64EF6F00034DE8 /* LaunchScreen.storyboard in Resources */,
+				20A41EE02B6A4B6D002E6CE7 /* BackgroundView.xib in Resources */,
 				20A87BB92B64EF6F00034DE8 /* Assets.xcassets in Resources */,
 				20A87BB72B64EF6D00034DE8 /* Main.storyboard in Resources */,
 			);
@@ -162,13 +251,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				20A87BCA2B64F89B00034DE8 /* SignUpViewController.swift in Sources */,
+				206B14482B69045800B3D65C /* RequestEnum.swift in Sources */,
 				20A87BC42B64F05700034DE8 /* LoginViewController.swift in Sources */,
-				20A87BC62B64F07100034DE8 /* LoginJSON.swift in Sources */,
-				20A87BC82B64F7CB00034DE8 /* HTTPHelper.swift in Sources */,
+				20A87BC62B64F07100034DE8 /* SessionJSON.swift in Sources */,
+				20A87BC82B64F7CB00034DE8 /* RequestHandler.swift in Sources */,
+				206B14422B68F20900B3D65C /* QuoteTableViewController.swift in Sources */,
+				2031A8532B73ABEB009ABCC1 /* BackgroundHandler.swift in Sources */,
 				2071F89E2B6746A300226B48 /* AlertHelper.swift in Sources */,
+				209B08D62B80F22600D545E7 /* SetTableViewController.swift in Sources */,
 				20A87BB02B64EF6D00034DE8 /* AppDelegate.swift in Sources */,
-				2071F8A12B67487D00226B48 /* UserDefaultHelper.swift in Sources */,
+				2031A8552B73AF94009ABCC1 /* SetBackgroundViewController.swift in Sources */,
+				2071F8A12B67487D00226B48 /* UserDefaultHandler.swift in Sources */,
 				20A87BB22B64EF6D00034DE8 /* SceneDelegate.swift in Sources */,
+				206B14452B68F31000B3D65C /* GetQuoteJSON.swift in Sources */,
+				206B143C2B68F13100B3D65C /* QuoteOfDayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

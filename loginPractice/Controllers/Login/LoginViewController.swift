@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     var loginUser = Response(){
         didSet{
             if let encodeUser = try? JSONEncoder().encode(loginUser){
-                UserDafaultsSave(key: "User", value: encodeUser)
+                UserDefaultHandler.shared.UserDafaultsSave(key: "User", value: encodeUser)
             }
         }
     }
@@ -25,13 +25,20 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let data = UserDafaultsRead(key: "User"),
+        if let data = UserDefaultHandler.shared.UserDafaultsRead(key: "User"),
            let encodeData = try? JSONDecoder().decode(Response.self, from: data){
             print("有成功儲存Token在UserDafaults: ",encodeData)
         }
-        
-        // Do any additional setup after loading the view.
     }
+    
+    var isFirstLoad = true
+    
+    override func viewWillAppear(_ animated: Bool) {
+        BackgroundHandler.shared.showBackground(self, isFirstLoad: isFirstLoad)
+        isFirstLoad = false
+    }
+    
+
     
     @IBAction func login(_ sender: Any) {
         // vaildation 第三方套件 swift package
@@ -44,7 +51,7 @@ class LoginViewController: UIViewController {
         }else{
             let userInfo = Info(login: accountText.text!, email: "", password: passwordText.text!)
             
-            RequestHandler.shared.httpMethod(info: userInfo, status: .login) { result in
+            RequestHandler.shared.sendHttpRequest(info: userInfo, status: .login, listOrPost: nil) { result in
                 switch result{
                 case .success(let data):
                     if let data = try? JSONDecoder().decode(Response.self, from: data){

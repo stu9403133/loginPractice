@@ -19,10 +19,17 @@ class SignUpViewController: UIViewController {
     var createUser = Response(){
         didSet{
             if let encodeUser = try? JSONEncoder().encode(createUser){
-                UserDafaultsSave(key: "User", value: encodeUser)
+                UserDefaultHandler.shared.UserDafaultsSave(key: "User", value: encodeUser)
             }
             
         }
+    }
+    
+    var isFirstLoad = true
+    
+    override func viewWillAppear(_ animated: Bool) {
+        BackgroundHandler.shared.showBackground(self, isFirstLoad: isFirstLoad)
+        isFirstLoad = false
     }
     
     override func viewDidLoad() {
@@ -45,7 +52,7 @@ class SignUpViewController: UIViewController {
         }else{
             let userInfo = Info(login: userNameText.text!, email: accountText.text!, password: passwordText.text!)
             
-            RequestHandler.shared.httpMethod(info: userInfo, status: .createUser) { result in
+            RequestHandler.shared.sendHttpRequest(info: userInfo, status: .createUser, listOrPost: nil) { result in
                 switch result {
                 case .success(let data):
                     if let signUpResponse = try? JSONDecoder().decode(Response.self, from: data){
